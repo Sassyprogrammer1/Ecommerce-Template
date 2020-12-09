@@ -2,7 +2,7 @@
   "name": "react-porto",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://www.portotheme.com/react/porto/demo1/",
+  "homepage": ".",
   "basename": "/",
   "dependencies": {
     "@babel/core": "7.1.0",
