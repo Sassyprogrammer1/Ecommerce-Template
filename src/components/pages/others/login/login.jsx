@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
@@ -26,7 +26,7 @@ function Login() {
         }
     }
 
-    
+
   //   const confirmSignUp = async (data) => {
   //     try {
   //       await Auth.confirmSignUp(username, code);
