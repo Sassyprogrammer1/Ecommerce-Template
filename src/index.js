@@ -15,6 +15,9 @@ import { getAllProducts, refreshStore } from './action';
 
 //import utils
 import { definePolyfills, scrollTop } from './utils';
+import  Amplify, { Auth } from 'aws-amplify';
+import awsconfig from './aws-exports';
+
 
 // import routes
 import Routes from './routes';
@@ -43,5 +46,5 @@ export function Root() {
     );
 }
 
-
+Amplify.configure(awsconfig);   
 ReactDOM.render( <Root />, document.getElementById( 'root' ) );
