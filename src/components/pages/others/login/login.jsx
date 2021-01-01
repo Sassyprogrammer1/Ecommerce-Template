@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import Breadcrumb from '../../../common/breadcrumb';
-import Amplify, { Auth } from 'aws-amplify';
+import { Auth } from 'aws-amplify';
 
 
 function Login() {
@@ -15,60 +16,55 @@ function Login() {
     };
   
     const performSignUp = async (data) => {
-      try{
-  
+      try{ 
           const { user } = await Auth.signUp({username:data.name,password:data.password,attributes:{phone_number:data.phoneNumber,name:data.goodname}});
           console.log(user)   
-          
-      
         }
         catch(error){ 
           console.log(error)
-          //   throw new Error(error)
+          //throw new Error(error)
         }
-  
     }
+  //   const confirmSignUp = async (data) => {
+  //     try {
+  //       await Auth.confirmSignUp(username, code);
+  //     } catch (error) {
+  //         console.log('error confirming sign up', error);
+  //     }
+  // }
   
-    const confirmSignUp = async (data) => {
-      try {
-        await Auth.confirmSignUp(username, code);
-      } catch (error) {
-          console.log('error confirming sign up', error);
-      }
-  }
+    // const signIn = async (data) => {
+    //   try {
+    //     const user = await Auth.signIn(username, password);
+    // } catch (error) {
+    //     console.log('error signing in', error);
+    // }
+    // }
   
-    const signIn = async (data) => {
-      try {
-        const user = await Auth.signIn(username, password);
-    } catch (error) {
-        console.log('error signing in', error);
-    }
-    }
+  //   const resendConfirmationCode = async (data) => {
+  //     try {
+  //         await Auth.resendSignUp(username);
+  //         console.log('code resent successfully');
+  //     } catch (err) {
+  //         console.log('error resending code: ', err);
+  //     }
+  // }
   
-    const resendConfirmationCode = async (data) => {
-      try {
-          await Auth.resendSignUp(username);
-          console.log('code resent successfully');
-      } catch (err) {
-          console.log('error resending code: ', err);
-      }
-  }
+  //   const signOut = async (data) => {
+  //     try {
+  //         await Auth.signOut();
+  //     } catch (error) {
+  //         console.log('error signing out: ', error);
+  //     }
+  // }   
   
-    const signOut = async (data) => {
-      try {
-          await Auth.signOut();
-      } catch (error) {
-          console.log('error signing out: ', error);
-      }
-  }   
-  
-    const globalSignOut = async (data) => {
-      try {
-        await Auth.signOut({ global: true });
-    } catch (error) {
-        console.log('error signing out: ', error);
-    }
-  }
+  //   const globalSignOut = async (data) => {
+  //     try {
+  //       await Auth.signOut({ global: true });
+  //   } catch (error) {
+  //       console.log('error signing out: ', error);
+  //   }
+  // }
   
   
     return (
