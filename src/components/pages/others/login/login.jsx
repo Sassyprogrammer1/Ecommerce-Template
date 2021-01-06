@@ -17,7 +17,7 @@ function Login() {
   
     const performSignUp = async (data) => {
       try{ 
-          const { user } = await Auth.signUp({username:data.name,password:data.password,attributes:{phone_number:data.phoneNumber,name:data.goodname}});
+          const { user } = await Auth.signUp({username:data.name,password:data.password,attributes:{email:data.name,phone_number:data.phoneNumber,name:data.goodname}});
           console.log(user)   
         }
         catch(error){ 
@@ -25,7 +25,6 @@ function Login() {
           //throw new Error(error)
         }
     }
-
 
   //   const confirmSignUp = async (data) => {
   //     try {
