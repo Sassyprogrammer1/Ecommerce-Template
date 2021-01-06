@@ -21,27 +21,27 @@ function MainMenu( props ) {
                                 <Link to={ `${ process.env.PUBLIC_URL }/categories/full-width` } className="nolink">Variations 1</Link>
 
                                 <ul className="submenu">
-                                    <li><Link to={ `${ process.env.PUBLIC_URL }/categories/full-width` }>Fullwidth Banner</Link></li>
+                                    {/* <li><Link to={ `${ process.env.PUBLIC_URL }/categories/full-width` }>Fullwidth Banner</Link></li>
                                     <li><Link to={ `${ process.env.PUBLIC_URL }/categories/boxed-slider` }>Boxed Slider Banner</Link></li>
                                     <li><Link to={ `${ process.env.PUBLIC_URL }/categories/boxed-image` }>Boxed Image Banner</Link></li>
                                     <li><Link to={ `${ process.env.PUBLIC_URL }/categories/sidebar-left` }>Left Sidebar</Link></li>
                                     <li><Link to={ `${ process.env.PUBLIC_URL }/categories/sidebar-right` }>Right Sidebar</Link></li>
                                     <li><Link to={ `${ process.env.PUBLIC_URL }/categories/flex-grid` }>Product Flex Grid</Link></li>
                                     <li><Link to={ `${ process.env.PUBLIC_URL }/categories/horizontal-filter1` }>Horizontal Filter1</Link></li>
-                                    <li><Link to={ `${ process.env.PUBLIC_URL }/categories/horizontal-filter2` }>Horizontal Filter2</Link></li>
+                                    <li><Link to={ `${ process.env.PUBLIC_URL }/categories/horizontal-filter2` }>Horizontal Filter2</Link></li> */}
                                 </ul>
                             </div>
                             <div className="col-lg-4">
                                 <Link to={ `${ process.env.PUBLIC_URL }/categories/list` } className="nolink">Variations 2</Link>
                                 <ul className="submenu">
-                                    <li><Link to={ `${ process.env.PUBLIC_URL }/categories/list` }>List Types</Link></li>
+                                    {/* <li><Link to={ `${ process.env.PUBLIC_URL }/categories/list` }>List Types</Link></li>
                                     <li><Link to={ `${ process.env.PUBLIC_URL }/categories/infinite-scroll` }>Ajax Infinite Scroll</Link></li>
                                     <li><Link to={ `${ process.env.PUBLIC_URL }/categories/3cols` }>3 Columns Products</Link></li>
                                     <li><Link to={ `${ process.env.PUBLIC_URL }/categories/4cols` }>4 Columns Products</Link></li>
                                     <li><Link to={ `${ process.env.PUBLIC_URL }/categories/5cols` }>5 Columns Products</Link></li>
                                     <li><Link to={ `${ process.env.PUBLIC_URL }/categories/6cols` }>6 Columns Products</Link></li>
                                     <li><Link to={ `${ process.env.PUBLIC_URL }/categories/7cols` }>7 Columns Products</Link></li>
-                                    <li><Link to={ `${ process.env.PUBLIC_URL }/categories/8cols` }>8 Columns Products</Link></li>
+                                    <li><Link to={ `${ process.env.PUBLIC_URL }/categories/8cols` }>8 Columns Products</Link></li> */}
                                 </ul>
                             </div>
                             <div className="col-lg-4 p-0">
@@ -50,7 +50,7 @@ function MainMenu( props ) {
                         </div>
                     </div>
                 </li>
-                <li className={ path.indexOf( "products/" ) > -1 ? 'active' : '' }>
+                {/* <li className={ path.indexOf( "products/" ) > -1 ? 'active' : '' }>
                     <Link to={ `${ process.env.PUBLIC_URL }/products/default/15` } className="sf-with-ul">Products</Link>
                     <div className="megamenu megamenu-fixed-width">
                         <div className="row">
@@ -91,7 +91,7 @@ function MainMenu( props ) {
                             </div>
                         </div>
                     </div>
-                </li>
+                </li> */}
                 <li className={ path.indexOf( "pages/" ) > -1 ? 'active' : '' }>
                     <Link to={ `${ process.env.PUBLIC_URL }/pages/cart` } className="sf-with-ul">Pages</Link>
 
