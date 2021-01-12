@@ -9,7 +9,6 @@ import { Modal, Button } from "react-bootstrap";
 import { Auth } from "aws-amplify";
 
 function Login() {
-<<<<<<< HEAD
   let history = useHistory();
   let dataObj;
   console.log(dataObj)
@@ -32,27 +31,9 @@ function Login() {
     } catch (error) {
       console.log(error);
       //throw new Error(error)
-=======
-    
-    let dataObj;  
-    const { register, handleSubmit } = useForm();
-  
-    const onSubmit = (data) => {
-        dataObj = data
-    };
-  
-    const performSignUp = async (data) => {
-      try{ 
-          const { user } = await Auth.signUp({username:data.name,password:data.password,attributes:{email:data.name,phone_number:data.phoneNumber,name:data.goodname}});
-          console.log(user)   
-        }
-        catch(error){ 
-          console.log(error)
-          //throw new Error(error)
-        }
->>>>>>> 2f93e898338789c014bcdc8c26267c500a084953
     }
   };
+
   
     const confirmSignUp = async (data) => {
       try {
@@ -64,36 +45,20 @@ function Login() {
       }
   }
 
-<<<<<<< HEAD
   const signIn = async (data) => {
     try {
       console.log("aaaaa",data)
       const user = await Auth.signIn(data.username, data.password).then(
        history.push("/")
       );
+      localStorage.setItem("AUTH_USER_TOKEN_KEY", user.signInUserSession.accessToken.jwtToken);
+
+      // console.log(user.signInUserSession.accessToken.jwtToken);
   } catch (error) {
       console.log('error signing in', error);
   }
   }
 
-=======
-  //   const confirmSignUp = async (data) => {
-  //     try {
-  //       await Auth.confirmSignUp(username, code);
-  //     } catch (error) {
-  //         console.log('error confirming sign up', error);
-  //     }
-  // }
-  
-    // const signIn = async (data) => {
-    //   try {
-    //     const user = await Auth.signIn(username, password);
-    // } catch (error) {
-    //     console.log('error signing in', error);
-    // }
-    // }
-  
->>>>>>> 2f93e898338789c014bcdc8c26267c500a084953
   //   const resendConfirmationCode = async (data) => {
   //     try {
   //         await Auth.resendSignUp(username);

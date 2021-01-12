@@ -275,3 +275,24 @@ export const hideNewsletter = () => dispatch => {
 export const cleanFilter = () => ( {
     type: types.FILTER_CLEAN_FILTERS
 } );
+
+/****************** Login Actions *****************/
+
+// /**
+//  * Dispatch Refresh Store
+//  * @param { Object } user
+//  */
+// export const addAUTHUser = user => ( {
+//     type: types.ADD_AUTH_USER,
+//     user
+// } );
+
+// /**
+//  * Get all Products
+//  */
+// export const userLogin = () => dispatch => {
+//     api.login.then( user => {
+//         dispatch( addAUTHUser(user) );
+//         return user;
+//     } )
+// }

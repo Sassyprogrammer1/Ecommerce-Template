@@ -15,7 +15,7 @@ import { getAllProducts, refreshStore } from './action';
 
 //import utils
 import { definePolyfills, scrollTop } from './utils';
-import  Amplify, { Auth } from 'aws-amplify';
+import  Amplify from 'aws-amplify';
 import awsconfig from './aws-exports';
 
 
